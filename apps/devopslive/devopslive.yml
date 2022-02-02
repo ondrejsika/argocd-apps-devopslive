@@ -16,7 +16,7 @@ spec:
       releaseName: devopslive
       values: |
         host: devopslive.k8s.sikademo.com
-        image: sikalabs/hello-world-server:devopslive
+        image: sikalabs/hello-world-server:red
   syncPolicy:
     automated:
       prune: true
