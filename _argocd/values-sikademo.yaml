@@ -1,0 +1,16 @@
+argo-cd:
+  server:
+    ingress:
+      enabled: true
+      hosts:
+        - argocd.k8s.sikademo.com
+      ingressClassName: nginx
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt
+        nginx.ingress.kubernetes.io/server-snippet: |
+          proxy_ssl_verify off;
+        nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+      tls:
+        - hosts:
+          - argocd.k8s.sikademo.com
+          secretName: argocd-tls
