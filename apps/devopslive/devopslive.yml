@@ -16,7 +16,7 @@ spec:
       releaseName: devopslive
       values: |
         host: devopslive.k8s.sikademo.com
-        image: registry.sikalabs.com/examples/demo:94999260-master-5888
+        image: registry.sikalabs.com/examples/demo:3bdeca59-master-5889
   syncPolicy:
     automated:
       prune: true
